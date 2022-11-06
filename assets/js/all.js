@@ -29,6 +29,9 @@ srollTL.to(".scroll", {
 srollTL.to("#newspaper_up", {
   yPercent: "-100"
 });
+srollTL.to(".header", {
+  opacity: 1
+});
 srollTL.to("#newspaper_right", {
   yPercent: "100"
 }, "<");
