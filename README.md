@@ -48,3 +48,6 @@
 * postcss.config.js
 * README.md
 * tailwind.config.js
+
+## Bugs
+一開始載入時，有時候會出現GSAP動畫卡住的情況，請重新整理即可。
