@@ -95,7 +95,7 @@ var mouseAnimation2 = bodymovin.loadAnimation({
 });
 var scrollDownWhiteAnimation = bodymovin.loadAnimation({
   container: document.querySelector('#scroll_down_white'),
-  path: '/F2E2022/assets/assets/json/scroll_down_white.json',
+  path: '/F2E2022/assets/json/scroll_down_white.json',
   renderer: 'svg',
   loop: true,
   autoplay: true,
