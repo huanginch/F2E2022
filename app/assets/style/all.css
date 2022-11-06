@@ -17,14 +17,12 @@
     html {
         font-family: 'Noto Sans TC', system-ui, sans-serif;
         scroll-behavior: smooth;
-        overflow-x: hidden;
         line-height: 1.5;
         overflow: hidden;
     }
     body {
         cursor: url('../images/cursor.png'), auto;
         color: #38241B;
-        /* overflow-x: hidden; */
         overflow: hidden;
     }
 

@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
+const pump = require('pump');
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
@@ -18,6 +19,14 @@ function copyFile() {
     }),
   );
 }
+
+// function copyJSON() {
+//   return pump(
+//     gulp.src('./dist/assets/json/**/*.json'),
+//     gulpAddJSON('filename.json', { field: 'value' }),
+//     gulp.dest(envOptions.copyFile.path)
+//   );
+// }
 
 function layoutHTML() {
   return gulp.src(envOptions.html.src)

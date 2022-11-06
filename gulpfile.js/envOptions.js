@@ -12,6 +12,7 @@ let envOptions = {
       `${srcPath}/**/*`,
       `!${srcPath}/assets/js/**/*.js`,
       `!${srcPath}/assets/style/**/*.css`,
+      `!${srcPath}/assets/json/**/*.json`,
       `!${srcPath}/**/*.ejs`,
       `!${srcPath}/**/*.html`,
     ],
