@@ -63,7 +63,7 @@ srollTL.to("#wanted", {
 
 var magicStickAnimation1 = bodymovin.loadAnimation({
   container: document.querySelector('#magicStick-animation1'),
-  path: '../json/MagicStick_loading.json',
+  path: '/F2E2022/assets/json/MagicStick_loading.json',
   renderer: 'svg',
   loop: true,
   autoplay: true,
