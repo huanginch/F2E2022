@@ -4,6 +4,8 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
+
+const gulpAddJSON = require('gulp-add-json-file');
 const pump = require('pump');
 
 let options = minimist(process.argv.slice(2), envOptions);
@@ -20,13 +22,14 @@ function copyFile() {
   );
 }
 
-// function copyJSON() {
-//   return pump(
-//     gulp.src('./dist/assets/json/**/*.json'),
-//     gulpAddJSON('filename.json', { field: 'value' }),
-//     gulp.dest(envOptions.copyFile.path)
-//   );
-// }
+gulp.task('default', () => {
+  /* Copy 'src/**' to 'dest', add 'filename.json' from JS object. */
+  return pump(
+    gulp.src('./app/assets/json/**'),
+    gulpAddJSON('filename.json', { field: 'value' }),
+    gulp.dest('./dist')
+  );
+});
 
 function layoutHTML() {
   return gulp.src(envOptions.html.src)
