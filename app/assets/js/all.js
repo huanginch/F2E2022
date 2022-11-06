@@ -41,7 +41,7 @@ var magicStickAnimation1 = bodymovin.loadAnimation({
 
   container: document.querySelector('#magicStick-animation1'),
 
-  path: '../assets/json/MagicStick_loading.json',
+  path: '/F2E2022/assets/json/MagicStick_loading.json',
 
   renderer: 'svg',
 
@@ -57,7 +57,7 @@ var magicStickAnimation2 = bodymovin.loadAnimation({
 
   container: document.querySelector('#magicStick-animation2'),
 
-  path: '../assets/json/MagicStick_loading.json',
+  path: '/F2E2022/assets/json/MagicStick_loading.json',
 
   renderer: 'svg',
 
@@ -74,7 +74,7 @@ var mouseAnimation1 = bodymovin.loadAnimation({
 
   container: document.querySelector('#mouse-animation1'),
 
-  path: '../assets/json/scroll_down.json',
+  path: '/F2E2022/assets/json/scroll_down.json',
 
   renderer: 'svg',
 
@@ -90,7 +90,7 @@ var mouseAnimation2 = bodymovin.loadAnimation({
 
   container: document.querySelector('#mouse-animation2'),
 
-  path: '../assets/json/scroll_down.json',
+  path: '/F2E2022/assets/json/scroll_down.json',
 
   renderer: 'svg',
 
@@ -106,7 +106,7 @@ var scrollDownWhiteAnimation = bodymovin.loadAnimation({
 
   container: document.querySelector('#scroll_down_white'),
 
-  path: '../assets/json/scroll_down_white.json',
+  path: '/F2E2022/assets/json/scroll_down_white.json',
 
   renderer: 'svg',
 
@@ -123,7 +123,7 @@ var swipeAnimation = bodymovin.loadAnimation({
 
   container: document.querySelector('#swipe-animation'),
 
-  path: '../assets/json/swipe_up.json',
+  path: '/F2E2022/assets/json/swipe_up.json',
 
   renderer: 'svg',
 
