@@ -58,7 +58,8 @@ srollTL.to("#V4", {
 });
 srollTL.to("#wanted", {
   opacity: 1
-}); //json magic stick animation
+}); // lottie animation
+//json magic stick animation 
 
 var magicStickAnimation1 = bodymovin.loadAnimation({
   container: document.querySelector('#magicStick-animation1'),
