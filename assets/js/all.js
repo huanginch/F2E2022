@@ -19,7 +19,7 @@ var srollTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#banner",
     pin: true,
-    markers: true,
+    // markers: true,
     scrub: true
   }
 }); // global animation
