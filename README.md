@@ -1,6 +1,5 @@
 # F2E2022 Challenge 1: Redesigning the Web
-> Code: int
-> Design: [KT](https://2022.thef2e.com/users/12061579703802991521)
+> Code: int / Design: [KT](https://2022.thef2e.com/users/12061579703802991521)
 ## Introduction
 重新設計F2E首頁。
 >網址: https://inthuang.tw/F2E2022/
@@ -32,6 +31,7 @@
       * all.js
     * json
       * MagicStick_loading.json
+      * scroll_down.json
       * scroll_down_white.json
       * swipe_up.json
     * style
