@@ -14,27 +14,46 @@ var mySwiper = new Swiper('.timeSwiper', {
 });
 
 // banner newspaper animation using gsap
+
 const srollTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#banner",
     pin: true,
-    // markers: true,
+    markers: true,
     scrub: true,
   },
 });
 
+// global animation
 srollTL.to(".scroll", { opacity: 0 })
 srollTL.to("#newspaper_up", { yPercent: "-100" });
 srollTL.to(".header", { opacity: 1 })
 srollTL.to("#newspaper_right", { yPercent: "100" }, "<");
 srollTL.to("#newspaper_right_mobile", { yPercent: "150" }, "<");
-srollTL.to("#newspaper_left", { yPercent: "100"});
+srollTL.to("#newspaper_left", { yPercent: "100" });
 srollTL.to("#newspaper_left_mobile", { yPercent: "150" }, "<");
-srollTL.to("#V1", { yPercent: "-35" });
-srollTL.to("#V2", { yPercent: "-23" });
-srollTL.to("#V3", { yPercent: "-30" });
-srollTL.to("#V4", { yPercent: "-80" });
-srollTL.to("#wanted", { opacity: 1})
+
+var viewport_width = window.innerWidth;
+
+console.log(viewport_width);
+// RWD setting
+if (viewport_width < 480) {
+  srollTL.to("#V1", { yPercent: "-80" });
+}
+else if (viewport_width < 768) {
+  // sm
+  srollTL.to("#V1", { yPercent: "-30" });
+}
+else if (viewport_width < 1024) {
+  // md
+  srollTL.to("#V1", { yPercent: "-23" });
+}
+else  {
+  // lg
+  srollTL.to("#V1", { yPercent: "-35" });
+}
+
+srollTL.to("#wanted", { opacity: 1 })
 
 // lottie animation
 //json magic stick animation 
@@ -54,7 +73,7 @@ var magicStickAnimation1 = bodymovin.loadAnimation({
 
 });   
 
-var magicStickAnimation2 = bodymovin.loadAnimation({
+var magicStickAnimation2 = lottie.loadAnimation({
 
   container: document.querySelector('#magicStick-animation2'),
 
