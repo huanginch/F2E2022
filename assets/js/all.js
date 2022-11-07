@@ -19,10 +19,11 @@ var srollTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#banner",
     pin: true,
-    // markers: true,
+    markers: true,
     scrub: true
   }
-});
+}); // global animation
+
 srollTL.to(".scroll", {
   opacity: 0
 });
@@ -44,18 +45,30 @@ srollTL.to("#newspaper_left", {
 srollTL.to("#newspaper_left_mobile", {
   yPercent: "150"
 }, "<");
-srollTL.to("#V1", {
-  yPercent: "-35"
-});
-srollTL.to("#V2", {
-  yPercent: "-23"
-});
-srollTL.to("#V3", {
-  yPercent: "-30"
-});
-srollTL.to("#V4", {
-  yPercent: "-80"
-});
+var viewport_width = window.innerWidth;
+console.log(viewport_width); // RWD setting
+
+if (viewport_width < 480) {
+  srollTL.to("#V1", {
+    yPercent: "-80"
+  });
+} else if (viewport_width < 768) {
+  // sm
+  srollTL.to("#V1", {
+    yPercent: "-30"
+  });
+} else if (viewport_width < 1024) {
+  // md
+  srollTL.to("#V1", {
+    yPercent: "-23"
+  });
+} else {
+  // lg
+  srollTL.to("#V1", {
+    yPercent: "-35"
+  });
+}
+
 srollTL.to("#wanted", {
   opacity: 1
 }); // lottie animation
@@ -69,7 +82,7 @@ var magicStickAnimation1 = bodymovin.loadAnimation({
   autoplay: true,
   name: "Magic Stick Animation"
 });
-var magicStickAnimation2 = bodymovin.loadAnimation({
+var magicStickAnimation2 = lottie.loadAnimation({
   container: document.querySelector('#magicStick-animation2'),
   path: '/F2E2022/assets/json/MagicStick_loading.json',
   renderer: 'svg',
