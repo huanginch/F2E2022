@@ -67,7 +67,7 @@ magicSticks.forEach((item, index) => {
 
     container: item,
 
-    path: '/F2E2022/assets/json/MagicStick_loading.json',
+    path: './assets/json/MagicStick_loading.json',
 
     renderer: 'svg',
 
@@ -89,7 +89,7 @@ mouses.forEach((item, index) => {
 
     container: item,
 
-    path: '/F2E2022/assets/json/scroll_down.json',
+    path: './assets/json/scroll_down.json',
 
     renderer: 'svg',
 
@@ -107,7 +107,7 @@ var scrollDownWhiteAnimation = bodymovin.loadAnimation({
 
   container: document.querySelector('#scroll_down_white'),
 
-  path: '/F2E2022/assets/json/scroll_down_white.json',
+  path: './assets/json/scroll_down_white.json',
 
   renderer: 'svg',
 
@@ -124,7 +124,7 @@ var swipeAnimation = bodymovin.loadAnimation({
 
   container: document.querySelector('#swipe-animation'),
 
-  path: '/F2E2022/assets/json/swipe_up.json',
+  path: './assets/json/swipe_up.json',
 
   renderer: 'svg',
 
