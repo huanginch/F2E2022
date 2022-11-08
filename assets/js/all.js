@@ -74,39 +74,33 @@ srollTL.to("#wanted", {
 }); // lottie animation
 //json magic stick animation 
 
-var magicStickAnimation1 = bodymovin.loadAnimation({
-  container: document.querySelector('#magicStick-animation1'),
-  path: '/F2E2022/assets/json/MagicStick_loading.json',
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  name: "Magic Stick Animation"
-});
-var magicStickAnimation2 = lottie.loadAnimation({
-  container: document.querySelector('#magicStick-animation2'),
-  path: '/F2E2022/assets/json/MagicStick_loading.json',
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  name: "Magic Stick Animation"
-}); //mouse scroll animation
+var magicSticks = document.querySelectorAll('.magicStick'); // console.log(magicSticks[1]);
 
-var mouseAnimation1 = bodymovin.loadAnimation({
-  container: document.querySelector('#mouse-animation1'),
-  path: '/F2E2022/assets/json/scroll_down.json',
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  name: "Mouse Scroll Animation"
-});
-var mouseAnimation2 = bodymovin.loadAnimation({
-  container: document.querySelector('#mouse-animation2'),
-  path: '/F2E2022/assets/json/scroll_down.json',
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  name: "Mouse Scroll Animation"
-});
+var magicStickAnimation = Array(magicSticks.length);
+magicSticks.forEach(function (item, index) {
+  magicStickAnimation[index] = bodymovin.loadAnimation({
+    container: item,
+    path: '/F2E2022/assets/json/MagicStick_loading.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    name: "Magic Stick Animation" + index
+  });
+}); //json mouse scroll down animation
+
+var mouses = document.querySelectorAll('.mouse');
+var mouseAnimation = Array(mouses.length);
+mouses.forEach(function (item, index) {
+  mouseAnimation[index] = bodymovin.loadAnimation({
+    container: item,
+    path: '/F2E2022/assets/json/scroll_down.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    name: "Mouse Animation" + index
+  });
+}); // white scroll down animation
+
 var scrollDownWhiteAnimation = bodymovin.loadAnimation({
   container: document.querySelector('#scroll_down_white'),
   path: '/F2E2022/assets/json/scroll_down_white.json',
