@@ -93,7 +93,7 @@ var mouseAnimation = Array(mouses.length);
 mouses.forEach(function (item, index) {
   mouseAnimation[index] = bodymovin.loadAnimation({
     container: item,
-    path: '/F2E2022/assets/json/scroll_down.json',
+    path: './assets/json/scroll_down.json',
     renderer: 'svg',
     loop: true,
     autoplay: true,
@@ -103,7 +103,7 @@ mouses.forEach(function (item, index) {
 
 var scrollDownWhiteAnimation = bodymovin.loadAnimation({
   container: document.querySelector('#scroll_down_white'),
-  path: '/F2E2022/assets/json/scroll_down_white.json',
+  path: './assets/json/scroll_down_white.json',
   renderer: 'svg',
   loop: true,
   autoplay: true,
@@ -112,7 +112,7 @@ var scrollDownWhiteAnimation = bodymovin.loadAnimation({
 
 var swipeAnimation = bodymovin.loadAnimation({
   container: document.querySelector('#swipe-animation'),
-  path: '/F2E2022/assets/json/swipe_up.json',
+  path: './assets/json/swipe_up.json',
   renderer: 'svg',
   loop: true,
   autoplay: true,
