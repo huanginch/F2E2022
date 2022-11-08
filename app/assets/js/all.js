@@ -56,72 +56,53 @@ else  {
 srollTL.to("#wanted", { opacity: 1 })
 
 // lottie animation
+
 //json magic stick animation 
-var magicStickAnimation1 = bodymovin.loadAnimation({
+var magicSticks = document.querySelectorAll('.magicStick');
+// console.log(magicSticks[1]);
+var magicStickAnimation = Array(magicSticks.length);
 
-  container: document.querySelector('#magicStick-animation1'),
+magicSticks.forEach((item, index) => {
+  magicStickAnimation[index] = bodymovin.loadAnimation({
 
-  path: '/F2E2022/assets/json/MagicStick_loading.json',
+    container: item,
 
-  renderer: 'svg',
+    path: '/F2E2022/assets/json/MagicStick_loading.json',
 
-  loop: true,
+    renderer: 'svg',
 
-  autoplay: true,
+    loop: true,
 
-  name: "Magic Stick Animation",
+    autoplay: true,
 
-});   
+    name: "Magic Stick Animation" + index,
 
-var magicStickAnimation2 = lottie.loadAnimation({
-
-  container: document.querySelector('#magicStick-animation2'),
-
-  path: '/F2E2022/assets/json/MagicStick_loading.json',
-
-  renderer: 'svg',
-
-  loop: true,
-
-  autoplay: true,
-
-  name: "Magic Stick Animation",
-
-})
-
-//mouse scroll animation
-var mouseAnimation1 = bodymovin.loadAnimation({
-
-  container: document.querySelector('#mouse-animation1'),
-
-  path: '/F2E2022/assets/json/scroll_down.json',
-
-  renderer: 'svg',
-
-  loop: true,
-
-  autoplay: true,
-
-  name: "Mouse Scroll Animation",
-
-}); 
-
-var mouseAnimation2 = bodymovin.loadAnimation({
-
-  container: document.querySelector('#mouse-animation2'),
-
-  path: '/F2E2022/assets/json/scroll_down.json',
-
-  renderer: 'svg',
-
-  loop: true,
-
-  autoplay: true,
-
-  name: "Mouse Scroll Animation",
-
+  });
 });
 
+//json mouse scroll down animation
+var mouses = document.querySelectorAll('.mouse');
+var mouseAnimation = Array(mouses.length);
+
+mouses.forEach((item, index) => {
+  mouseAnimation[index] = bodymovin.loadAnimation({
+
+    container: item,
+
+    path: '/F2E2022/assets/json/scroll_down.json',
+
+    renderer: 'svg',
+
+    loop: true,
+
+    autoplay: true,
+
+    name: "Mouse Animation" + index,
+
+  });
+})
+
+// white scroll down animation
 var scrollDownWhiteAnimation = bodymovin.loadAnimation({
 
   container: document.querySelector('#scroll_down_white'),
