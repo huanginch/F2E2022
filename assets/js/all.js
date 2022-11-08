@@ -80,7 +80,7 @@ var magicStickAnimation = Array(magicSticks.length);
 magicSticks.forEach(function (item, index) {
   magicStickAnimation[index] = bodymovin.loadAnimation({
     container: item,
-    path: '/F2E2022/assets/json/MagicStick_loading.json',
+    path: './assets/json/MagicStick_loading.json',
     renderer: 'svg',
     loop: true,
     autoplay: true,
